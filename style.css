@@ -2,3 +2,9 @@ body{
     margin: 0;
     padding: 0;
 }
+
+.fete{
+    background-image: url(assets/images/fond_fete.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
