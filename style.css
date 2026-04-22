@@ -7,11 +7,20 @@ body{
 }
 
 .maison_carton{
-    background-image: url(/assets/images/maison-en-carton.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: absolute;
     z-index: 100;
-    width: 40px;
-    height: 40px;
-    left: 50%;
+    width: 500px;
+    transform: rotate(20deg);
+    margin-left: 250px;
+    margin-top:300px;
+}
+
+.maison_scotch{
+    position: absolute;
+    filter: invert(100%);
+    width: 300px;
+    z-index: 100;
+    transform: rotate(-36deg);
+    margin-left:787px;
+    margin-top:465px;
 }
