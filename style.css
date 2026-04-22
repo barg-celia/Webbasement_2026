@@ -20,3 +20,201 @@
 .image-container:hover .imagefond2 {
   opacity: 1; 
 }
+body{
+    background-image: url(/assets/images/fond_fonce.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+}
+
+.maison_carton{
+    position: absolute;
+    width: 500px;
+    transform: rotate(20deg);
+    margin-left: 250px;
+    margin-top:300px;
+}
+
+.maison_scotch{
+    position: absolute;
+    filter: invert(100%);
+    width: 300px;
+    transform: rotate(-36deg);
+    margin-left:787px;
+    margin-top:465px;
+}
+
+.robot{
+    position: absolute;
+    width: 120px;
+    height: 90px;
+    margin-left: 1200px;
+    margin-top: 760px;
+}
+
+.chocobo{
+    position: absolute;
+    width: 120px;
+    height: 90px;
+    margin-left: 1200px;
+    margin-top: 810px;
+}
+
+.carte_mere{
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    margin-left: 200px;
+    margin-top: 200px;   
+}
+
+.active{
+    width: 200px;
+    height: 400px;
+}
+
+.keypad{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 75px;
+}
+
+.keypad-container.hidden {
+    display: none;
+}
+
+.robot-trigger {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.keypad-container {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 100; 
+}
+h1{
+    color: white;
+}
+ .menu-subtitle, .controls-hint, .btn-free{
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+    align-items: center;
+}
+
+#game-container {
+position: relative;
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+}
+
+.menu-content{
+    display: flex;
+    margin-left: 40px ;
+    flex-direction: column-reverse;
+}
+
+#hamster {
+position: absolute;
+width: var(--hamster-size);
+height: var(--hamster-size);
+object-fit: contain;
+z-index: 10;
+image-rendering: pixelated;
+transition: width 0.05s, height 0.05s, transform 0.05s;
+transform-origin: bottom center;
+will-change: left, top, width, height;
+}
+
+#hamster.stretching {
+animation: stretchUp var(--stretch-duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes stretchUp {
+0% {
+transform: scaleY(1);
+transform-origin: bottom center;
+}
+30% {
+transform: scaleY(1.4) scaleX(0.8);
+transform-origin: bottom center;
+}
+60% {
+transform: scaleY(2.5) scaleX(0.7);
+transform-origin: bottom center;
+}
+100% {
+transform: scaleY(0);
+width: var(--hamster-size);
+height: 100vh;
+transform-origin: bottom center;
+}
+}
+
+#hamster.full-height {
+height: 100vh !important;
+width: var(--hamster-size) !important;
+top: 0 !important;
+transition: none;
+}
+
+.house {
+position: absolute;
+width: var(--house-size);
+height: var(--house-size);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 64px;
+cursor: default;
+z-index: 5;
+transition: transform 0.1s;
+filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+will-change: left;
+}
+
+.house.sliding-out {
+animation: slideOutRight var(--slide-duration) cubic-bezier(0.55, 0, 1, 0.45) forwards;
+}
+
+@keyframes slideOutRight {
+0% {
+transform: translateX(0);
+opacity: 1;
+}
+70% {
+opacity: 1;
+}
+100% {
+transform: translateX(120vw);
+opacity: 0;
+}
+}
+
+#instructions {
+position: fixed;
+top: 16px;
+left: 50%;
+transform: translateX(-50%);
+background: rgba(0,0,0,0.55);
+color: #fff;
+padding: 8px 20px;
+border-radius: 20px;
+font-family: 'Segoe UI', sans-serif;
+font-size: 14px;
+z-index: 100;
+pointer-events: none;
+letter-spacing: 0.03em;
+}
