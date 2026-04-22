@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Webbasement</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
 </head>
 <body class="body">
     <img class="maison_carton" src="./assets/images/maisoncarton.png">
     <img class="maison_scotch" src="./assets/images/maisonschotch.png">
+    <img class="chocobo" src="./assets/images/chocobo.png">
+    <img class="carte_mere" src="./assets/images/carte_mere.png">
+
+    <div class="menu-screen" id="menuScreen">
+        <div class="menu-content">
+            <h1 class="game-title">Les 3 grandes licornes<br><span>Adventure</span></h1>
+            <p class="menu-subtitle">Tous aux abris, le hamster vient souffler les maisons</p>
+        </div>
+     </div>
+    <img class="robot" src="./assets/images/robot.png">
+</button>
+
+<div class="keypad-container hidden" id="keypad-ui">
+    <input type="text" id="code-display">
+    <div class="keypad">
+        <button onclick="pressKey(1)">1</button>
+        <button onclick="pressKey(2)">2</button>
+        <button onclick="pressKey(3)">3</button>
+        <button onclick="pressKey(4)">4</button>
+        <button onclick="pressKey(5)">5</button>
+        <button onclick="pressKey(6)">6</button>
+        <button onclick="pressKey(7)">7</button>
+        <button onclick="pressKey(8)">8</button>
+        <button onclick="pressKey(9)">9</button>
+        <button onclick="resetCode()" class="btn-clear">C</button>
+        <button onclick="pressKey(0)">0</button>
+    </div>
+
+    <img class="carte_mere" src="./assets/images/carte_mere.png">
+</div>
+</div>
 </body>
 </html>
